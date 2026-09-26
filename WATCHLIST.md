@@ -1,6 +1,6 @@
 # Watchlist groups and setups
 
-Last updated: 2026-09-26. IBKR watchlist "Penny Option" (30 tickers) is ordered in these groups.
+Last updated: 2026-09-26. IBKR watchlist "Penny Option" (31 tickers) is ordered in these groups.
 
 ## Market gauge (top of the list)
 | Ticker | Role | Latest read (2026-09-25 close) |
@@ -11,6 +11,11 @@ Last updated: 2026-09-26. IBKR watchlist "Penny Option" (30 tickers) is ordered 
 | Ticker | Position | See |
 |---|---|---|
 | PFE | Long Oct 16 '26 28 call, 1 contract @ $0.75 (other broker) | `journal/trades.csv` |
+
+## Stock trades (shares, traded at the user's other broker)
+| Ticker | Rule | Status (2026-09-25 close) |
+|---|---|---|
+| TQQQ | 3x Nasdaq-100 ETF, shares only. HOLD while the Friday weekly close is above its 40-week average; SELL on the first weekly close below it. Size about $200 (fractional shares). Swing trade only, never buy and sell the same day (PDT). Don't pair with an XSP call spread (same bet). | Close 79.60 vs 40-week avg 63.36: rule says HOLD/BUY. Caution: market flat 6 weeks, 9% below high 87.89. Not bought yet. |
 
 ## Setups (waiting for a trigger)
 | Ticker | Direction | Trigger | Planned trade | Confidence | Notes |
@@ -39,7 +44,6 @@ Last updated: 2026-09-26. IBKR watchlist "Penny Option" (30 tickers) is ordered 
 | ET, VALE, UNG, AAL, RIVN, HIMS, SOFI, NOK, KMI, BEN, VTRS | Low predictability score at last screen |
 
 ## Retired
-- TQQQ: removed from the IBKR watchlist by the user (noticed 2026-09-26).
 - SURG, FNGR (removed 2026-09-26): stock ~$0.15 vs lowest strikes $0.50–$1, not option-tradeable.
 
 ## Other watchlists screened

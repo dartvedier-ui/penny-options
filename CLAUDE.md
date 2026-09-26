@@ -39,6 +39,12 @@ Read this first in every session. Then read `WATCHLIST.md` (setups + triggers) a
 - Market-bias filter for every setup: if XSP's 13-week trend is clearly up, lower put setups one confidence
   step; if clearly down, lower call setups one step.
 
+## Stock trades (shares)
+- TQQQ is traded as SHARES at the user's other broker (to avoid PDT flags at IBKR), not options.
+- Rule: hold while the weekly (Friday) close is above the 40-week average; sell on the first weekly close
+  below it. Backtest 2022-07..2026-09 on weekly closes: x3.45 vs x5.70 buy-and-hold, but worst drop -31% vs -54%.
+- About $200 max (fractional shares), swing only (no same-day round trips). Not together with XSP call spreads.
+
 ## Predictability score
 Average of the 26-week and 13-week weekly log-price trend R²; 0 if the two slopes disagree in sign.
 Also look at the 6-week trend for turns.
