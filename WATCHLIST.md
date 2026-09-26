@@ -1,6 +1,6 @@
 # Watchlist groups and setups
 
-Last updated: 2026-09-26. IBKR watchlist "Penny Option" (31 tickers) is ordered in these groups.
+Last updated: 2026-09-26. IBKR watchlist "Penny Option" (16 tickers) is ordered in these groups.
 
 ## Market gauge (top of the list)
 | Ticker | Role | Latest read (2026-09-25 close) |
@@ -32,16 +32,31 @@ Last updated: 2026-09-26. IBKR watchlist "Penny Option" (31 tickers) is ordered 
 | CCL | Put | AFTER earnings Tue 2026-09-29 (9:15 AM ET): bounce toward $22.75–23.50 that fails | Oct 23 '26 22 put, or 22/20 put spread if IV still high | Low–Med | Best new trend: 6-wk −4.2%/wk R² 0.90. Do NOT trade before earnings |
 | KRE | Put | Bounce to ~$73 (SMA20) that fails | Oct 23 '26 72 put | Low | 26w/13w trends disagree; cheap IV. Regional bank earnings mid/late Oct |
 
-## Scan list (no opportunity now)
+## Strategy tickers (backtested strategy, no setup right now)
 | Ticker | Why |
 |---|---|
-| VXX | Strategy exists (60–90 DTE puts) — triggers after a vol spike rolls over |
-| NKE | Strategy exists — earnings blackout; FQ1 report Thu 2026-10-01 after close, re-check after Oct 2 |
-| NU | No trend (R² 0.03–0.17) |
-| EEM | Trend too weak (score ~0.25) |
-| SLV | 26w and 13w trends conflict; very volatile |
-| BAC | News-driven drop, IV 87th pct, earnings ~mid-Oct |
-| ET, VALE, UNG, AAL, RIVN, HIMS, SOFI, NOK, KMI, BEN, VTRS | Low predictability score at last screen |
+| VXX | 60-90 DTE put strategy. Signal ON as of 2026-09-24, but the planned 90-DTE put costs ~$280+; look for a cheaper spread. Options ~42k/day, IV 17th pct. |
+| NKE | Earnings blackout; FQ1 report Thu 2026-10-01 after close, re-check after the Oct 2 reaction. Options ~183k/day. |
+
+## Bench (removed from IBKR 2026-09-26, recheck monthly; next ~2026-10-26)
+Weekly-bar score = avg of 26w and 13w R2, 0 if their slopes disagree. Avg option volume = contracts/day.
+| Ticker | Score | Avg opt vol | Reason removed |
+|---|---|---|---|
+| SOFI | 0.00 | 335k | 26w up vs 13w down (6w down, R2 0.95) |
+| AAL | 0.00 | 124k | 26w up vs 13w down |
+| RIVN | 0.00 | 95k | 26w flat vs 13w down |
+| HIMS | 0.00 | 81k | 26w up vs 13w down, very volatile (IV ~67%) |
+| BAC | 0.00 | 194k | News-driven drop, trends conflict, earnings mid-Oct |
+| SLV | 0.00 | 409k | Trends conflict |
+| NOK | 0.05 | 156k | No trend |
+| NU | 0.07 | 100k | No trend |
+| UNG | 0.11 | 48k | No trend |
+| KMI | 0.29 | 10.6k | Weak trend |
+| EEM | 0.33 | 115k | Weak trend |
+| VALE | 0.37 | 27k | Weak 13w trend |
+| ET | 0.57 | 29k | Borderline; slow (~0.5%/wk) and 6w turning down |
+| BEN | - | ~0.7k | Options barely trade |
+| VTRS | - | ~1.1k | Options barely trade |
 
 ## Retired
 - SURG, FNGR (removed 2026-09-26): stock ~$0.15 vs lowest strikes $0.50–$1, not option-tradeable.

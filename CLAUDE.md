@@ -58,8 +58,8 @@ Also look at the 6-week trend for turns.
 ## Scan workflow (who does what)
 - **Daily briefing (Routine, 8:45 AM NY):** one agent, no subagents. It only checks the open trades and the
   setup triggers, which is cheap.
-- **Full universe scan (weekly, or when the user asks):** split the Penny Option watchlist into batches of
-  about 10 and launch one `penny-scanner` subagent per batch IN PARALLEL (`.claude/agents/penny-scanner.md`,
+- **Full universe scan (weekly, or when the user asks):** split the Penny Option watchlist (16 tickers) into 2 batches of
+  about 8 and launch one `penny-scanner` subagent per batch IN PARALLEL (`.claude/agents/penny-scanner.md`,
   runs on Sonnet to save usage). Each returns one table. The main session merges the tables, ranks them,
   then updates WATCHLIST.md, the Penny Option order, and the daily briefing prompt.
 - **Deep check when a trigger fires:** one `penny-scanner` per triggered ticker (news, earnings, IV).
@@ -67,6 +67,8 @@ Also look at the 6-week trend for turns.
   with bid/ask, exits, confidence).
 - Subagents use MORE total usage than one agent, so use them only for the full scan and deep checks.
 - `screen.py` does the trend math so every subagent computes it the same way.
+- **Bench recheck (monthly):** re-score the Bench tickers in WATCHLIST.md; bring back any with score >= 0.6
+  and >= ~10k option contracts a day.
 
 ## Daily briefing Routine
 "Penny daily briefing" (trig_018283RxTbwpmWM6DbKKupGv) runs 8:45 AM New York time on weekdays with IBKR attached.
