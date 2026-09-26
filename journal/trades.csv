@@ -1,2 +1,2 @@
 id,status,broker,ticker,structure,expiry,strikes,qty,entry_date,entry_price,underlying_at_entry,trigger_rule,confidence,take_profit,stop,time_exit,exit_date,exit_price,pnl_usd,notes
-1,OPEN,other,PFE,long call,2026-10-16,28C,1,2026-09-25,0.75,28.37,uptrend continuation,Low-Med,option >= 1.50 (PFE ~29.40),PFE close < 28.20 (breakeven); hard stop PFE close < 27.20,2026-10-09,,,,Monitored by Routine trig_01CEQM891L9w1V4Ce3YTxsMS; Pfizer Q3 earnings expected after expiry
+1,OPEN,other,PFE,long call,2026-10-16,28C,1,2026-09-25,0.75,28.37,uptrend continuation,Low-Med,option >= 1.50 (PFE ~29.40),PFE close < 28.20 (breakeven); hard stop PFE close < 27.20,2026-10-09,,,,Monitored by Penny daily briefing (trig_018283RxTbwpmWM6DbKKupGv); Pfizer Q3 earnings expected after expiry
