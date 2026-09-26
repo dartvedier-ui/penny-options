@@ -42,6 +42,12 @@ Also look at the 6-week trend for turns.
   user's IBKR mobile app, so the grouping is kept by ORDER inside Penny Option and in `WATCHLIST.md`.
 - `edit_watchlist` is full-replace: always `get_watchlist` first.
 
+## Daily briefing Routine
+"Penny daily briefing" (trig_018283RxTbwpmWM6DbKKupGv) runs 8:45 AM New York time on weekdays with IBKR attached.
+Its prompt embeds a COPY of the open trades, setups and rules, because a scheduled run may not be able to
+open this private repo. Whenever WATCHLIST.md or journal/trades.csv changes, update that Routine's prompt too
+(update_trigger with the full new prompt).
+
 ## Journal
 `journal/trades.csv` — one row per trade. Update it whenever the user reports a fill or an exit.
 Record the user's actual fill price, never an estimate.
