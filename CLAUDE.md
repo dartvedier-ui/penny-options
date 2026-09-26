@@ -42,6 +42,19 @@ Also look at the 6-week trend for turns.
   user's IBKR mobile app, so the grouping is kept by ORDER inside Penny Option and in `WATCHLIST.md`.
 - `edit_watchlist` is full-replace: always `get_watchlist` first.
 
+## Scan workflow (who does what)
+- **Daily briefing (Routine, 8:45 AM NY):** one agent, no subagents. It only checks the open trades and the
+  setup triggers, which is cheap.
+- **Full universe scan (weekly, or when the user asks):** split the Penny Option watchlist into batches of
+  about 10 and launch one `penny-scanner` subagent per batch IN PARALLEL (`.claude/agents/penny-scanner.md`,
+  runs on Sonnet to save usage). Each returns one table. The main session merges the tables, ranks them,
+  then updates WATCHLIST.md, the Penny Option order, and the daily briefing prompt.
+- **Deep check when a trigger fires:** one `penny-scanner` per triggered ticker (news, earnings, IV).
+  The main session pulls the live option chain and writes the final trade ticket (expiry + DTE, strikes
+  with bid/ask, exits, confidence).
+- Subagents use MORE total usage than one agent, so use them only for the full scan and deep checks.
+- `screen.py` does the trend math so every subagent computes it the same way.
+
 ## Daily briefing Routine
 "Penny daily briefing" (trig_018283RxTbwpmWM6DbKKupGv) runs 8:45 AM New York time on weekdays with IBKR attached.
 Its prompt embeds a COPY of the open trades, setups and rules, because a scheduled run may not be able to
@@ -55,6 +68,8 @@ Record the user's actual fill price, never an estimate.
 ## Code
 - `common.py` data loader + Black-Scholes option-return model.
 - `strategies/<TICKER>.py` exposes `signal(df)`; `<TICKER>_backtest.py` reproduces the study.
+- `screen.py` predictability screen for any tickers from a JSON of closes (score, 26w/13w/6w trends,
+  HV20, short-DTE ratio, CANDIDATE/WATCH/SKIP).
 - `scan.py` ranks today's signals: `python3 scan.py` (needs pandas, numpy; refresh `data/*.csv` from IBKR first).
 - `reports/<TICKER>.md` full write-ups. Reports for tickers added later (PFE, XLF, KHC, F, XLE, CCL, KRE)
   are not written yet.
