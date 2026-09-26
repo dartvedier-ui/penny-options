@@ -25,4 +25,6 @@ Return ONLY this table, sorted by score, then at most 5 lines of notes:
 
 Verdict: CANDIDATE / WATCH / SKIP from screen.py, downgraded one step if earnings fall inside
 the next 25 days or average option volume is under ~2,000 contracts a day.
+XSP is an index: use contract_id 137851301 with security_type IND and exchange CBOE for price history
+and snapshots (no earnings; report the market bias instead).
 If a tool fails, say which ticker and which call in the notes; do not guess numbers.

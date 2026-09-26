@@ -32,6 +32,13 @@ Read this first in every session. Then read `WATCHLIST.md` (setups + triggers) a
 - No clean trend → no trade.
 - Short-DTE check: expected 3-week trend move ÷ ATM 21-DTE option cost (≈ 0.4 × IV × √(21/365)) should be ≥ 1.0.
 
+## XSP (market gauge)
+- XSP = Mini-S&P 500 index options, 1/10 of SPX, European style, cash-settled (no early assignment).
+- One at-the-money XSP option ~3 weeks out costs roughly $800+, more than the account. Trade XSP ONLY as
+  debit spreads 2-3 points wide (about $100-150 risk), 21-28 DTE, and only when its trend score is 0.6+.
+- Market-bias filter for every setup: if XSP's 13-week trend is clearly up, lower put setups one confidence
+  step; if clearly down, lower call setups one step.
+
 ## Predictability score
 Average of the 26-week and 13-week weekly log-price trend R²; 0 if the two slopes disagree in sign.
 Also look at the 6-week trend for turns.

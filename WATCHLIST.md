@@ -2,6 +2,11 @@
 
 Last updated: 2026-09-26. IBKR watchlist "Penny Option" (30 tickers) is ordered in these groups.
 
+## Market gauge (top of the list)
+| Ticker | Role | Latest read (2026-09-25 close) |
+|---|---|---|
+| XSP | Mini-S&P 500 index (1/10 of SPX), IBKR contract 137851301, type IND, exchange CBOE. Sets the market bias for all setups; trade only as small debit spreads. | 774.34. 26w +0.44%/wk (R2 0.68), 13w +0.30%/wk (R2 0.48), 6w flat. Score 0.58 = WATCH. IV 11.6% (6th pct, cheap). Bias: mildly up / sideways. |
+
 ## Active (open trades)
 | Ticker | Position | See |
 |---|---|---|
@@ -31,9 +36,10 @@ Last updated: 2026-09-26. IBKR watchlist "Penny Option" (30 tickers) is ordered 
 | EEM | Trend too weak (score ~0.25) |
 | SLV | 26w and 13w trends conflict; very volatile |
 | BAC | News-driven drop, IV 87th pct, earnings ~mid-Oct |
-| ET, VALE, UNG, AAL, RIVN, HIMS, SOFI, TQQQ, NOK, KMI, BEN, VTRS | Low predictability score at last screen |
+| ET, VALE, UNG, AAL, RIVN, HIMS, SOFI, NOK, KMI, BEN, VTRS | Low predictability score at last screen |
 
 ## Retired
+- TQQQ: removed from the IBKR watchlist by the user (noticed 2026-09-26).
 - SURG, FNGR (removed 2026-09-26): stock ~$0.15 vs lowest strikes $0.50–$1, not option-tradeable.
 
 ## Other watchlists screened
