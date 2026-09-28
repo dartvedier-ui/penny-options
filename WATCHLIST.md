@@ -11,6 +11,7 @@ Last updated: 2026-09-28 (first full subagent scan). IBKR watchlist "Penny Optio
 | Ticker | Position | See |
 |---|---|---|
 | PFE | Long Oct 16 '26 28 call, 1 contract @ $0.75 (other broker) | `journal/trades.csv` |
+| TLT | Oct 30 '26 79/77 put debit spread, 1 @ $0.80 (other broker), opened 2026-09-28 | `journal/trades.csv` |
 
 ## Stock trades (shares, traded at the user's other broker)
 | Ticker | Rule | Status (2026-09-25 close) |
@@ -20,7 +21,6 @@ Last updated: 2026-09-28 (first full subagent scan). IBKR watchlist "Penny Optio
 ## Setups (scan 2026-09-28; order = IBKR watchlist order)
 | Ticker | Score | Direction | Trigger / status | Planned trade | Confidence |
 |---|---|---|---|---|---|
-| TLT | 0.75 | Put | READY (any time). 78.80, IV at 100th pct -> spread. Fed hiked 9/16, one more signaled | Oct 30 '26 (32 DTE) 79/77 put spread, ~$0.66 debit at Fri close (live likely ~0.70-0.85). TP ~+100% (~$1.35), time exit Oct 23. Alt: 80/78 ~$0.88 | Low-Med |
 | VXX | 0.92 | Put | READY (13w down, below SMA20, no spike). 17.54 | Nov 20 '26 (53 DTE) 18/16 put spread, ~$1.18 at Fri close (over $80 flag), max value $2.00. Exit +50% or on a vol spike close above ~19 | Low-Med |
 | OPEN | 0.87 | Put | CLOSE: needs a Friday close >= ~2.61 (2.47 now, falling) | Oct 16 '26 3 put, re-price when triggered | Low |
 | NIO | 0.85 | Put | NOT YET: needs close > ~3.81 then back below (3.63 now) | 21 DTE put ~5% ITM | Low |
