@@ -1,11 +1,11 @@
 # Watchlist groups and setups
 
-Last updated: 2026-09-26. IBKR watchlist "Penny Option" (16 tickers) is ordered in these groups.
+Last updated: 2026-09-28 (first full subagent scan). IBKR watchlist "Penny Option" (16 tickers) is ordered in these groups.
 
 ## Market gauge (top of the list)
 | Ticker | Role | Latest read (2026-09-25 close) |
 |---|---|---|
-| XSP | Mini-S&P 500 index (1/10 of SPX), IBKR contract 137851301, type IND, exchange CBOE. Sets the market bias for all setups; trade only as small debit spreads. | 774.34. 26w +0.44%/wk (R2 0.68), 13w +0.30%/wk (R2 0.48), 6w flat. Score 0.58 = WATCH. IV 11.6% (6th pct, cheap). Bias: mildly up / sideways. |
+| XSP | Mini-S&P 500 index (1/10 of SPX), IBKR contract 137851301, type IND, exchange CBOE. Sets the market bias for all setups; trade only as small debit spreads. | 2026-09-28: 774.34, score 0.58 = WATCH. 13w +0.30%/wk (R2 0.48), 6w flat. Bias: SIDEWAYS -> no confidence adjustment. |
 
 ## Active (open trades)
 | Ticker | Position | See |
@@ -15,28 +15,28 @@ Last updated: 2026-09-26. IBKR watchlist "Penny Option" (16 tickers) is ordered 
 ## Stock trades (shares, traded at the user's other broker)
 | Ticker | Rule | Status (2026-09-25 close) |
 |---|---|---|
-| TQQQ | 3x Nasdaq-100 ETF, shares only. HOLD while the Friday weekly close is above its 40-week average; SELL on the first weekly close below it. Size about $200 (fractional shares). Swing trade only, never buy and sell the same day (PDT). Don't pair with an XSP call spread (same bet). | Close 79.60 vs 40-week avg 63.36: rule says HOLD/BUY. Caution: market flat 6 weeks, 9% below high 87.89. Not bought yet. |
+| TQQQ | 3x Nasdaq-100 ETF, shares only. HOLD while the Friday weekly close is above its 40-week average; SELL on the first weekly close below it. Size about $200 (fractional shares). Swing trade only, never buy and sell the same day (PDT). Don't pair with an XSP call spread (same bet). | Fri 9/25 close 79.60 vs 40-week avg 63.36 (+25.6%): BUY/HOLD. 77.71 on 9/28 morning. Not bought yet. |
 
-## Setups (waiting for a trigger)
-| Ticker | Direction | Trigger | Planned trade | Confidence | Notes |
+## Setups (scan 2026-09-28; order = IBKR watchlist order)
+| Ticker | Score | Direction | Trigger / status | Planned trade | Confidence |
 |---|---|---|---|---|---|
-| TLT | Put | Can enter now | Oct 23 '26 80/78 put debit spread, ~$0.91 debit (or Oct 23 82 put ~$3.25, −40% stop) | Low–Med | Take profit ~$1.65, close by Oct 16–18, half size |
-| XLF | Put | Close below $53.20 | 53/51 put spread, ~28 DTE | Low–Med | |
-| XLE | Call | Close above ~$64 | 64/67 call spread | Low–Med | |
-| F | Put | Failed bounce toward ~$13.30 | 13 put | Low–Med | |
-| NIO | Put | Close above ~$3.81, then back below | 21 DTE put, ~5% ITM | Low | Backtest edge weak |
-| KHC | Put | Bounce to ~$24.50 that fails | 24.5/23 put spread | Low–Med | |
-| OPEN | Put | Friday close ≥ ~$2.61 | Oct 16 '26 3 put | Low | Too stretched now |
-| IOVA | Call | Close ≤ ~$9.84 | 21 DTE ATM call | Low | Too extended now |
-| STLA | Put | Bounce to ≥ $5.05 | Jan 15 '27 5 put | Low–Med | Long DTE by design |
-| CCL | Put | AFTER earnings Tue 2026-09-29 (9:15 AM ET): bounce toward $22.75–23.50 that fails | Oct 23 '26 22 put, or 22/20 put spread if IV still high | Low–Med | Best new trend: 6-wk −4.2%/wk R² 0.90. Do NOT trade before earnings |
-| KRE | Put | Bounce to ~$73 (SMA20) that fails | Oct 23 '26 72 put | Low | 26w/13w trends disagree; cheap IV. Regional bank earnings mid/late Oct |
+| TLT | 0.75 | Put | READY (any time). 78.80, IV at 100th pct -> spread. Fed hiked 9/16, one more signaled | Oct 30 '26 (32 DTE) 79/77 put spread, ~$0.66 debit at Fri close (live likely ~0.70-0.85). TP ~+100% (~$1.35), time exit Oct 23. Alt: 80/78 ~$0.88 | Low-Med |
+| VXX | 0.92 | Put | READY (13w down, below SMA20, no spike). 17.54 | Nov 20 '26 (53 DTE) 18/16 put spread, ~$1.18 at Fri close (over $80 flag), max value $2.00. Exit +50% or on a vol spike close above ~19 | Low-Med |
+| OPEN | 0.87 | Put | CLOSE: needs a Friday close >= ~2.61 (2.47 now, falling) | Oct 16 '26 3 put, re-price when triggered | Low |
+| NIO | 0.85 | Put | NOT YET: needs close > ~3.81 then back below (3.63 now) | 21 DTE put ~5% ITM | Low |
+| CCL | 0.39 | Put | BLACKOUT: earnings Tue 9/29 9:15 AM ET, implied move ~7.5%. After: bounce toward 22.75-23.50 that fails | Oct 23 '26 22 put or 22/20 spread | Low |
+| XLE | 0.53 | Call | NOT YET: close > ~64 (62.34 now) | 64/67 call spread | Low |
+| IOVA | 0.87 | Call | NOT YET: close <= ~9.84 (10.90 now, strong uptrend; Goldman Buy $15 on 9/24). Earnings Nov 5 | 21 DTE ATM call | Low |
+| STLA | 0.78 | Put | NOT YET: bounce to >= 5.05 (4.70 now). Earnings Oct 28 | Jan 15 '27 5 put | Low-Med |
+| NKE | 0.80 | Either | BLACKOUT: earnings Thu 10/1 after close; re-check after the Oct 2 reaction | 45 DTE per strategy | - |
 
-## Strategy tickers (backtested strategy, no setup right now)
-| Ticker | Why |
-|---|---|
-| VXX | 60-90 DTE put strategy. Signal ON as of 2026-09-24, but the planned 90-DTE put costs ~$280+; look for a cheaper spread. Options ~42k/day, IV 17th pct. |
-| NKE | Earnings blackout; FQ1 report Thu 2026-10-01 after close, re-check after the Oct 2 reaction. Options ~183k/day. |
+## Trend gone (scan 2026-09-28) - candidates to move to the Bench (ask the user)
+| Ticker | Score | Note |
+|---|---|---|
+| XLF | 0.37 | 13w flat, 6w down; trigger 53.20 (54.51 now) |
+| KHC | 0.00 | Weak/conflicting trends; earnings ~late Oct |
+| F | 0.00 | Weak trends; -3.4% in 3 days on recalls/China scrutiny; earnings ~mid/late Oct |
+| KRE | 0.00 | Flat 13w (R2 0.42); no real trend |
 
 ## Bench (removed from IBKR 2026-09-26, recheck monthly; next ~2026-10-26)
 Weekly-bar score = avg of 26w and 13w R2, 0 if their slopes disagree. Avg option volume = contracts/day.
